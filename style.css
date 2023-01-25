@@ -88,4 +88,38 @@
 .body {
   background-color: rgba(197, 197, 197, 0.322);
   grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.body-left {
+  grid-column: 1/2;
+  display: grid;
+  grid-template-rows: 1fr 25fr;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 250px);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 500px));
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  border-left: 10px solid yellow;
+  border-radius: 1em;
+  height: 200px;
+  width: 400px;
+  padding: 1em;
+}
+
+.body-right {
+  grid-column: 2/3;
+  margin-top: 1em;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  margin-right: 15em;
 }
