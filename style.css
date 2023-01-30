@@ -190,9 +190,11 @@
 
 .cards {
   display: grid;
-  grid-template-rows: repeat(auto-fit, 250px);
-  grid-template-columns: repeat(auto-fill, minmax(200px, 500px));
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   align-items: center;
+  grid-auto-rows: 1fr;
+  gap: 2rem 1rem;
 }
 
 .card {
@@ -202,6 +204,30 @@
   height: 150px;
   width: 400px;
   padding: 1em;
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+}
+
+.card-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action-img,
+.card-action {
+  height: 2rem;
+  gap: 1rem;
+}
+
+.card-text {
+  padding: 1em 1m 0em;
+  margin: 0;
+  font-size: 1em;
+}
+
+.card-text p {
+  margin-top: 1em;
+  font-size: 1.2em;
 }
 
 .body-right {
