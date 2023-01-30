@@ -1,6 +1,6 @@
 * {
   margin: 0px;
-  padding: 0px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .container {
@@ -25,6 +25,25 @@
   grid-template-columns: 8fr 1fr;
 }
 
+.nav-search {
+  display: flex;
+}
+.nav-search > * {
+  margin: 0em 1em;
+}
+
+.user-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 5em;
+}
+
+.user-icon-down {
+  width: 80px;
+  height: 80px;
+  border-radius: 5em;
+}
+
 .nav-bar input[type="text"] {
   float: left;
   border: none;
@@ -41,6 +60,11 @@
   margin-right: 5em;
 }
 
+.nav-top-right > div {
+  font-size: larger;
+  font-weight: bold;
+}
+
 .nav-top-right > * {
   margin: 1em;
 }
@@ -54,12 +78,23 @@
   grid-row: 2/3;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  margin-bottom: 1em;
 }
 
 .nav-down-left {
   display: flex;
-  margin-left: 1em;
+  margin-left: 2em;
   align-items: center;
+}
+
+.nav-down-left .hi {
+  margin: 0;
+  font-weight: bold;
+}
+
+.nav-down-left .main-user-name {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .nav-name-container {
@@ -68,19 +103,39 @@
 
 .nav-down-right {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.nav-down-right > button {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(45, 142, 252);
+  padding: 1em;
+  border: none;
+  border-radius: 2em;
+  height: 20x;
+  width: 100px;
+  font-weight: bold;
+}
+
+.nav-down-right button:active {
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97);
 }
 
 .not-bell {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
 
 .side-bar {
+  background-color: rgb(45, 142, 252);
+  color: white;
   grid-column: 1/2;
   grid-row: 1/3;
-  background-color: aquamarine;
   display: grid;
   grid-template-rows: 72px 1fr 1fr;
 }
@@ -99,8 +154,8 @@
   justify-content: center;
   align-items: center;
   margin-left: 1em;
-  font-size: large;
-  font-weight: 500;
+  font-size: 0.55cm;
+  font-weight: 600;
 }
 
 .side-bar-icon-top {
@@ -111,6 +166,7 @@
 }
 
 .side-bar-icon {
+  fill: white !important;
   height: 20px;
   width: 20px;
   margin-right: 1em;
@@ -134,7 +190,7 @@
 
 .cards {
   display: grid;
-  grid-template-rows: repeat(auto-fill, 250px);
+  grid-template-rows: repeat(auto-fit, 250px);
   grid-template-columns: repeat(auto-fill, minmax(200px, 500px));
   align-items: center;
 }
@@ -143,7 +199,7 @@
   background-color: white;
   border-left: 10px solid yellow;
   border-radius: 1em;
-  height: 200px;
+  height: 150px;
   width: 400px;
   padding: 1em;
 }
@@ -183,4 +239,11 @@
 
 .box-minicontent {
   margin-left: 2em;
+}
+
+.announcement-border {
+  width: 100%;
+  height: 1px;
+  background-color: lightgray;
+  margin: 1em 0em;
 }
