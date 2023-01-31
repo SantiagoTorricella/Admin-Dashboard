@@ -150,14 +150,6 @@
   margin: 1em;
 }
 
-.side-item > div {
-  justify-content: center;
-  align-items: center;
-  margin-left: 1em;
-  font-size: 0.55cm;
-  font-weight: 600;
-}
-
 .side-bar-icon-top {
   height: 50px;
   width: 50px;
@@ -173,12 +165,26 @@
   margin-left: 0.7em;
 }
 
-.side-bar div img:hover ~ div {
+.side-bar div img:hover ~ button {
+  border-bottom: 2px solid white;
+}
+.side-item button {
+  cursor: pointer;
+  background: none;
+  color: white;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1em;
+  font-size: 0.55cm;
+  font-weight: 600;
+}
+.side-item button:hover {
   border-bottom: 2px solid white;
 }
 
-.side-item div:hover {
-  border-bottom: 2px solid white;
+.side-item button:active {
+  transform: scale(0.95);
 }
 
 .body {
@@ -225,6 +231,14 @@
 .card-action {
   height: 2rem;
   gap: 1rem;
+}
+
+.action-img {
+  cursor: pointer;
+}
+
+.action-img:active {
+  transform: scale(0.97);
 }
 
 .card-text {
